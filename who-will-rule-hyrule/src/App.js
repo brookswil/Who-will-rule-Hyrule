@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import TeamCollection from './Components/TeamCollection'
+import TeamPage from './Components/TeamPage';
 
-const API = 'http://localhost:3000/characters';
+const API = 'http://localhost:8000/characters';
 
 function App() {
   const [zelda, setZelda] = useState([]);
@@ -13,8 +13,8 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <TeamCollection zelda={zelda} />
+    <div className="App">
+      <TeamPage zelda={zelda} />
     </div>
   );
 }

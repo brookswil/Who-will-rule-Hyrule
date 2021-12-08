@@ -1,14 +1,16 @@
-import React from "react";
-import TeamCard from "./TeamCard";
+import React from 'react';
+import TeamCard from './TeamCard'
 
 function TeamCollection({ zelda }) {
-    console.log(zelda)
+    // console.log(zelda);
 
     return (
-        <div>
-            {
-                zelda.map((zelda) => <TeamCard key={zelda.id}/>)
-            }
+        <div className="ui two column grid">
+            <div className="row">
+                {
+                    zelda.map((zelda) => <TeamCard  key={zelda.id} zelda={zelda} />)
+                }
+            </div>
         </div>
     )
 }
