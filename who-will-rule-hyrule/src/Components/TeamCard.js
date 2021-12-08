@@ -7,7 +7,7 @@ function TeamCard({ zelda }) {
             <div className="ui column" style={{ width: 100}}>
                 <div className="ui card" key={zelda.id}>
                     <div className="image">
-                        <img src={zelda.image} alt={zelda.name} style={{width: 200}}/>
+                        <img src={zelda.image} alt={zelda.name} style={{width: 150}}/>
                     </div>
                     <div className="content">
                         <div className="header">
