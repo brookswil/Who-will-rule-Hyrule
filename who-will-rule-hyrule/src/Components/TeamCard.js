@@ -1,11 +1,16 @@
 import React from "react";
 
-function TeamCard({ zelda }) {
+
+const TeamCard = ({ zelda, handleClick, dischargeZelda }) => {
     // console.log(zelda)
 
     return (
             <div className="ui column" style={{ width: 100}}>
-                <div className="ui card" key={zelda.id}>
+                <div
+                    className="ui card"
+                    key={zelda.id}
+                    onClick={() => handleClick(zelda)}
+                >
                     <div className="image">
                         <img src={zelda.image} alt={zelda.name} style={{width: 150}}/>
                     </div>
@@ -24,8 +29,14 @@ function TeamCard({ zelda }) {
                         </span>
                         <span>
                             <div className="ui center aligned segment basic">
-                                <button className="ui mini red button">
-                                    Remove
+                                <button 
+                                    className="ui mini red button"
+                                    onClick={(event) => {
+                                        event.stopPropagation();
+                                        dischargeZelda(zelda);
+                                    }}
+                                    >
+                                        REMOVE
                                 </button>
                             </div>
                         </span>

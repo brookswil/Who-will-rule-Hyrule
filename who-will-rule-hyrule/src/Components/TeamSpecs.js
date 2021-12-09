@@ -1,6 +1,6 @@
 import React from "react";
 
-function TeamSpecs({ zelda }) {
+const TeamSpecs = ({ zelda }) => {
     return (
         <div className="ui segment">
             <div className="ui two column centered grid">
