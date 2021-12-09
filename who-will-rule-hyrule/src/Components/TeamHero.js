@@ -1,0 +1,1 @@
+// zelda.filter((zelda) => zelda.category === "hero" ? )
