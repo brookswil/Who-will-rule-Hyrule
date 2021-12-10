@@ -16,6 +16,7 @@ function TeamPage() {
 
   function enlistZelda(zelda) {
     setZelda(zeldas.map((z) => (z.id === zelda.id ? {...z, enlist: true } : z)));
+    console.log(zeldas)
   }
 
   function releaseZelda(zelda) {
@@ -30,7 +31,7 @@ function TeamPage() {
   return (
     <div>
         <YourTeamArmy
-            zelda={zeldas.filter(z => z.enlist)}
+            zeldas={zeldas.filter(z => z.enlist)}
             releaseZelda={releaseZelda}
             dischargeZelda={dischargeZelda}
          />
@@ -38,6 +39,7 @@ function TeamPage() {
                 zelda={zeldas}
                 enlistZelda={enlistZelda}
                 dischargeZelda={dischargeZelda}
+                
             />
        
     </div>
